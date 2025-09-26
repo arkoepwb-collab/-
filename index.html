@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>個人自我介紹範本</title>
+  <style>
+    :root{
+      --bg:#f7f7fb;
+      --card:#ffffff;
+      --accent:#ff7f7f; /* 淺紅色主題色 */
+      --muted:#6b7280;
+      --radius:12px;
+      --shadow:0 6px 18px rgba(16,24,40,0.08);
+      --glass: rgba(255,255,255,0.6);
+      --max-width:1000px;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff);color:#111827}
+
+    .container{max-width:var(--max-width);margin:36px auto;padding:28px}
+
+    header{
+      display:flex;align-items:center;gap:20px;margin-bottom:18px
+    }
+
+    .avatar{
+      width:110px;height:110px;border-radius:18px;overflow:hidden;flex:0 0 110px;box-shadow:var(--shadow);border:4px solid rgba(255,255,255,0.6)
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .headline{
+      padding:10px 14px;border-radius:14px;background:linear-gradient(90deg, rgba(255,127,127,0.12), rgba(255,127,127,0.06));
+      box-shadow:0 2px 8px rgba(255,127,127,0.05);
+    }
+    h1{margin:0;font-size:1.6rem;letter-spacing:0.2px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    /* layout */
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:20px}
+
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .section{margin-bottom:18px}
+    h2{margin:0 0 8px;font-size:1.05rem}
+    .meta{color:var(--muted);font-size:0.95rem}
+
+    /* about */
+    .bio{line-height:1.65;color:#333}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{background:linear-gradient(90deg,#fff,#fafafa);padding:6px 10px;border-radius:999px;border:1px solid #eee;font-size:0.9rem}
+
+    /* portfolio */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+
+    /* sidebar */
+    .info-list{display:flex;flex-direction:column;gap:10px}
+    .info-item{display:flex;gap:10px;align-items:flex-start}
+    .info-item strong{width:80px;color:var(--muted);font-weight:600}
+
+    .family-list{display:flex;flex-direction:column;gap:8px}
+    .family-member{display:flex;gap:10px;align-items:center}
+    .family-member img{width:48px;height:48px;border-radius:8px;object-fit:cover}
+
+    /* contact */
+    .contact-buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;border:1px solid rgba(0,0,0,0.06);background:var(--glass);backdrop-filter:blur(4px)}
+    .btn.primary{background:var(--accent);color:white;border:0}
+
+    /* footer */
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .avatar{width:86px;height:86px;flex:0 0 86px}
+      .gallery img{height:120px}
+    }
+
+    /* print-friendly */
+    @media print{
+      body{background:white}
+      .container{box-shadow:none}
+      .btn{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar card"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="個人頭像"></div>
+      <div class="headline">
+        <h1>王小明（範例）</h1>
+        <p class="lead">前端工程師 · 視覺設計愛好者 · 喜歡用程式解決問題</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- 主區域 -->
+      <section>
+        <div class="card section">
+          <h2>自我介紹</h2>
+          <p class="bio">嗨，你好！我是王小明，從事前端開發與使用者介面設計已超過 5 年。我的專長是把複雜的需求拆解並用乾淨、可維護的程式碼呈現出流暢的使用者體驗。閒暇時我喜歡攝影、烹飪與籃球。</p>
+        </div>
+
+        <div class="card section">
+          <h2>工作經歷（範例）</h2>
+          <div class="meta">2021 – 現在 · XYZ 科技 — 前端工程師</div>
+          <ul>
+            <li>主導公司內部設計系統，提升整體開發效率 30%。</li>
+            <li>負責購物車與結帳流程的前端重構，改善轉換率。</li>
+          </ul>
+          <div class="meta" style="margin-top:8px">2018 – 2021 · ABC 創意 — UI 設計師</div>
+          <ul>
+            <li>設計多款企業官網與行銷活動頁面，參與品牌視覺優化。</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h2>技能</h2>
+          <div class="skills">
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">響應式設計</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>作品集</h2>
+          <p class="meta">以下為範例圖片（請替換為你的作品截圖）</p>
+          <div class="gallery" style="margin-top:10px">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="作品 1">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="作品 2">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="作品 3">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="作品 4">
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 側欄 -->
+      <aside>
+        <div class="card section">
+          <h2>聯絡資訊</h2>
+          <div class="info-list">
+            <div class="info-item"><strong>Email</strong><div class="meta">example@email.com</div></div>
+            <div class="info-item"><strong>電話</strong><div class="meta">+66 012 345 6789</div></div>
+            <div class="info-item"><strong>地點</strong><div class="meta">台北市 / 可接受遠端</div></div>
+            <div class="info-item"><strong>網站</strong><div class="meta">www.example.com</div></div>
+          </div>
+
+          <div class="contact-buttons">
+            <a class="btn primary" href="#contact">聯絡我</a>
+            <a class="btn" href="#resume">下載履歷</a>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>家庭</h2>
+          <div class="family-list">
+            <div class="family-member"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="家人一"><div><strong>父親</strong><div class="meta">退休教師</div></div></div>
+            <div class="family-member"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="家人二"><div><strong>母親</strong><div class="meta">醫護人員</div></div></div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>興趣 / 愛好</h2>
+          <p class="meta">攝影 · 烹飪 · 籃球 · 旅行</p>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 王小明。此為自我介紹範本。請替換範例文字與圖片為個人資訊。</p>
+    </footer>
+  </div>
+</body>
+</html>
